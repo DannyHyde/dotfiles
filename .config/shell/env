@@ -83,8 +83,8 @@ export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 
 # node
 export NVM_DIR="$XDG_DATA_HOME/nvm"
-[ -s "$NVM_DIR/nvvm.sh" ] && source "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_compltion"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
