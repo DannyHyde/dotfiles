@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Running sudo commands
+for command in reboot shutdown pacman mount umount; do
+  alias $command="sudo $command"
+done; unset command
+
+# Programs
+alias \
+  v="nvim" \
+  vi="nvim" \
+  vim="nvim" \
+  e="$EDITOR" \
+  ls="eza -alh" \
+  cat="bat"
+
+# Pacman
+alias \
+  pacin="pacman -S" \
+  pacud="pacman -Syy" \
+  pacug="pacman -Syu" \
+  pacrm="pacman -R" \
+  paccl="pacman -Rs" \
+  pacsr="pacman -Ss" \
+  pacinst="pacman -Qqe > $XDG_CONFIG_HOME/packages.txt"
+
+# Git
+alias \
+  gs="git status" \
+  ga="git add" \
+  gaa="git add --all" \
+  gc="git commit -m" \
+  gl="git log --oneline" \
+  gb="git checkout -b" \
+  gd="git diff"
+
+# Movement
+alias \
+  ..="cd ..;pwd" \
+  ...="cd ../..;pwd" \
+  ....="cd ../../..;pwd" \
+  .....="cd ../../../..;pwd"
+
+# Pure lazinss
+alias \
+  cl="clear" \
+  snd="shutdown -h now" 
+
+# Dotfiles
+alias dots='/usr/bin/git --git-dir=/home/danny/repos/dotfiles --work-tree=/home/danny'
