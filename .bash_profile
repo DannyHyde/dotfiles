@@ -1,6 +1,6 @@
 #!/bin/bash #########################################################
 #
-#   env configuration ($HOME/.config/shell/profile)
+#   env configuration (.bash_profile)
 #   
 #   This configuration file, it sets numerous environment variables
 #   for my system. Helping to keep in line with XDG specifications.
