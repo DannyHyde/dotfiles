@@ -1,0 +1,70 @@
+#!/bin/bash
+#                                                                    #
+#    File         :  aliasrc                                         #
+#    Location     :  $HOME/.config/shell/aliasrc                     #
+#    Version      :  0.0.1                                           #
+#    Description  :                                                  #
+#        A plethora of usefull aliases for bash                      #
+#                                                                    #
+######################################################################
+
+# stop the sudo requirement for some system commands
+for command in mount umount pacman shutdown reboot ; do
+  alias $command="sudo $command"
+done; unset command
+
+# programs
+alias \
+  vi="nvim" \
+  vim="nvim" \
+  # notes="vim ~/projects/notes/notes.md" \
+
+# bat
+alias cat="bat"
+alias bathelp="bat --plain --language=help"
+help() {
+  "$@" --help 2>&1 | bathelp
+}
+
+# typo's and shortcuts
+alias \
+  cl="clear" \
+  q="quit" \
+  hist="history" \
+  cll="clear;ls -al" \
+  la="ls -a" \
+  ll="ls -lhA" \
+  pd="pwd" \
+  t="time" \
+  k="kill" \
+  null="/dev/null"
+
+# directories
+alias \
+  hm="cd ~" \
+  rt="cd /" \
+  down="cd ~/downloads" \
+  docs="cd ~/documents" \
+  proj="cd ~/projects" \
+  cpj="cd ~/projects/CProjects" \
+  ppj="cd ~/projects/PyProjects" \
+  wpj="cd ~/projects/WebProjects" \
+  ..="cd .." \
+  ...="cd ../.." \
+  ....="cd ../../.." \
+  .....="cd ../../../.."
+
+# git
+alias \
+  gt="git" \
+  gst="git status" \
+  gcom="git commit -m" \
+  gcl="git clone" \
+  gsh="git stash" \
+  gl="git log" \
+  gu="git add -u" \
+  gall="git add ."
+
+# dotfiles
+alias loadbash="source ~/.bash_profile"
+alias dots="/usr/bin/git --git-dir=$HOME/projects/dotfiles/ --work-tree=$HOME"
